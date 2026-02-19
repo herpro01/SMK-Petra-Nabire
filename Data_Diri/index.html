@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="Profill.ico">
+  <title>Jasa Kerja | HEDI • Cendrawasih</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    /* ===== WARNA PER BAGIAN ===== */
+    header {
+      background: linear-gradient(135deg, #020617, #0f172a, #020617);
+    }
+
+    .mid-section {
+      background: linear-gradient(180deg, #0f172a, #1e293b);
+    }
+
+    .bottom-section {
+      background: #020617;
+    }
+
+    /* ===== HERO ===== */
+    header {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+      gap: 40px;
+      padding: 60px 10%;
+    }
+
+    .hero-text h1 { font-size: 3rem; color: #38bdf8; }
+    .hero-text p { margin-top: 20px; font-size: 1.1rem; max-width: 600px; }
+
+    .btn {
+      margin-top: 30px;
+      display: inline-block;
+      padding: 12px 28px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px #38bdf8;
+      transform: scale(1.05);
+    }
+
+    .hero-img { text-align: center; }
+    .hero-img img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #38bdf8;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    /* ===== SECTION ===== */
+    section { padding: 80px 10%; }
+    h2 { font-size: 2.2rem; margin-bottom: 25px; color: #38bdf8; text-align: center; }
+
+    /* ===== REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== GRID ===== */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: 0.35s;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      filter: brightness(0.85);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+    }
+
+    .card:hover img {
+      filter: brightness(1);
+      transform: scale(1.05);
+    }
+
+    .card h3 { color: #7dd3fc; }
+
+    /* ===== CONTACT ===== */
+    .contact { text-align: center; }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      border: 1px solid #38bdf8;
+      border-radius: 30px;
+      color: #38bdf8;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    #toTop {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #38bdf8;
+      color: #020617;
+      border: none;
+      padding: 14px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    /* ===== PALING BAWAH (FOOTER FINAL) ===== */
+.footer-final {
+  background: linear-gradient(70deg, #020617, #0a0f1e);
+  border-top: 1px solid rgba(56,189,248,0.2);
+  color: #94a3b8;
+}
+
+.footer-final span {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+  </style>
+</head>
+
+<body>
+
+<header class="reveal">
+  <div class="hero-text">
+    <h1>Jasa Kreator Digital</h1>
+    <p>Desain • Web • Musik • Video • Foto profesional</p>
+    <a href="#order" class="btn">Pesan Sekarang</a>
+    <a href="#kami" class="btn">Tentang Kami</a>
+    <a href="#kerja" class="btn">Jasa Kerja</a>
+  </div>
+  <div class="hero-img">
+    <img src="Profil.jpeg">
+    <h3><span>HEDI</span> • Cendrawasih</h3>
+  </div>
+</header>
+
+<section class="contact reveal bottom-section" id="kami"></section>
+<section>
+  <h2>Tentang Kami</h2>
+  <p>
+    Kami adalah <strong>kreator digital multidisiplin</strong> yang berfokus pada penggabungan
+    desain visual, teknologi web, musik, serta konten multimedia untuk menciptakan karya yang
+    tidak hanya menarik secara estetika, tetapi juga efektif secara fungsi dan tujuan bisnis.
+  </p>
+
+  <p>
+    Berawal dari ketertarikan pada dunia kreatif dan teknologi, kami terus mengembangkan kemampuan
+    di berbagai bidang seperti desain grafis, pengembangan website, pembuatan beat musik,
+    serta editing video dan foto. Kombinasi keahlian ini memungkinkan kami
+    memberikan solusi kreatif yang menyeluruh—mulai dari konsep, produksi, hingga hasil akhir.
+  </p>
+
+  <p>
+    Dalam setiap proyek, kami selalu mengutamakan kualitas, detail, kenyamanan pengguna,
+    serta komunikasi yang jelas dengan klien. Kami terbiasa mengerjakan website portofolio,
+    landing page bisnis, desain branding, konten media sosial, beat original,
+    hingga video dan foto untuk kebutuhan promosi.
+  </p>
+
+  <p>
+    Kami percaya bahwa karya yang baik bukan hanya terlihat keren, tetapi juga mampu menyampaikan
+    pesan, membangun citra, dan memberi nilai tambah. Dengan komitmen pada kualitas dan
+    profesionalisme, kami siap menjadi partner kreatif untuk kebutuhan personal maupun bisnis Anda.
+  </p>
+
+
+</section>
+
+
+<section class="mid-section reveal">
+  <section class="contact reveal bottom-section" id="kerja"></section>
+  <h2>Jasa Kerja</h2>
+  <div class="skills">
+    <div class="card reveal"><img src="Desain.jpg"><h3>Desain Grafis</h3></div>
+    <div class="card reveal"><img src="Web.jpg"><h3>Web Development</h3></div>
+    <div class="card reveal"><img src="Video.jpg"><h3>Video Editing</h3></div>
+    <div class="card reveal"><img src="Photo.jpg"><h3>Photo Editing</h3></div>
+    <div class="card reveal"><img src="Beat.jpg"><h3>Beat Maker</h3></div>
+    <div class="card reveal"><img src="Auto.png"><h3>Autotune Pro</h3>Di Jual - Rp.35Rb</div>
+    <div class="card reveal"><img src="Auto5.jpg"><h3>Autotune 5</h3>Di Jual - Rp.25Rb</div>
+  </div>
+</section>
+
+<section class="contact reveal bottom-section" id="order">
+  <small>Harga Nego Lewat Chat</small>
+  <h2>Pesan Jasa</h2>
+  <h3>Klik Dibawah Ini Untuk Memesan</h3>
+  
+  <a href="https://wa.me/6285282027168">WhatsApp</a>
+  <a href="mailto:herkay465@gmail.com">Email</a>
+</section>
+
+<footer class="footer-final">
+  © 2026 | <span>Kreator Digital</span> • Cendrawasih  
+  <br>
+  <small>Desain • Web • Musik • Video • Foto</small>
+</footer>
+
+<button id="toTop">↑</button>
+
+<script>
+  function reveal() {
+    document.querySelectorAll(".reveal").forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+        el.classList.add("active");
+      }
+    });
+  }
+  window.addEventListener("scroll", reveal);
+  window.addEventListener("load", reveal);
+
+  const toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", () => {
+    toTop.style.display = window.scrollY > 400 ? "block" : "none";
+  });
+  toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+</script>
+
+</body>
+</html>

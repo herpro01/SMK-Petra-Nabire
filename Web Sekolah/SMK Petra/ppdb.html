@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="logoo.ico">
+<title>Info PPDB</title>
+
+<style>
+body {
+  background-image: url("sekolah1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  
+}
+
+/* HEADER */
+header {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 900;
+  text-shadow: 3px 3px 8px black;
+}
+
+header p {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px black;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 15px;
+}
+
+/* BOX */
+.box {
+  margin-bottom: 30px;
+}
+
+h2 {
+  background: #748391;
+  color: rgb(0, 0, 0);
+  padding: 12px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+}
+
+/* TABEL */
+.table-info {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.table-info th {
+  background: #748391;
+  color: rgb(32, 32, 32);
+  padding: 12px;
+  text-align: left;
+  width: 35%;
+}
+
+.table-info td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.table-info tr:hover {
+  background: #f1f7ff;
+}
+
+/* FOOTER */
+.footer {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+.title-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+/* TAMBAHAN */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background blur + putih */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("sekolah1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(3px);
+  z-index: -2;
+}
+
+/* Lapisan putih transparan */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Atur 0.4 jadi 0.5 jika ingin lebih putih */
+  z-index: -1;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Informasi Pendaftaran Siswa Baru (PPDB)</h1>
+  <p>Tahun Ajaran 2026 / 2027</p>
+</header>
+
+<div class="container">
+
+  <!-- Tentang Pendaftaran -->
+  <div class="box">
+    <h2>Tentang Pendaftaran</h2>
+    <table class="table-info">
+      <tr>
+        <th>Deskripsi</th>
+        <td>
+          Penerimaan Peserta Didik Baru (PPDB) dibuka bagi lulusan SMP/MTs 
+          yang ingin melanjutkan pendidikan ke jenjang SMK. Sekolah menerima 
+          siswa baru sesuai kuota dan ketentuan yang berlaku.
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Program Keahlian -->
+  <div class="box">
+    <h2>Program Keahlian</h2>
+    <table class="table-info">
+      <tr>
+        <th>Jurusan 1</th>
+        <td>Akuntansi dan Keuangan Lembaga (AKL)</td>
+      </tr>
+      <tr>
+        <th>Jurusan 2</th>
+        <td>Otomatisasi dan Tata Kelola Perkantoran (OTKP)</td>
+      </tr>
+      <tr>
+        <th>Jurusan 3</th>
+        <td>Teknik Komputer dan Jaringan (TKJ)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Persyaratan -->
+  <div class="box">
+    <h2>Persyaratan Umum</h2>
+    <table class="table-info">
+      <tr>
+        <th>1</th>
+        <td>Lulusan SMP/MTs atau sederajat</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>Mengisi formulir pendaftaran di sekolah</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>Fotokopi Ijazah / SKL</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>Fotokopi Kartu Keluarga (KK)</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>Fotokopi Akta Kelahiran</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>Pas Foto ukuran 3x4</td>
+      </tr>
+      <tr>
+        <th>7</th>
+        <td>Nilai Rapor</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Jadwal -->
+  <div class="box">
+    <h2>Jadwal Pendaftaran</h2>
+    <table class="table-info">
+      <tr>
+        <th>Pendaftaran Dibuka</th>
+        <td>Maret 2026</td>
+      </tr>
+      <tr>
+        <th>Batas Akhir</th>
+        <td>Juni 2026</td>
+      </tr>
+      <tr>
+        <th>Seleksi Berkas</th>
+        <td>Juli 2026</td>
+      </tr>
+      <tr>
+        <th>Pengumuman</th>
+        <td>Juli 2026</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Tempat -->
+  <div class="box">
+    <h2>Tempat Pendaftaran</h2>
+    <table class="table-info">
+      <tr>
+        <th>Lokasi</th>
+        <td>Kantor Sekolah (SMK Petra Nabire)</td>
+      </tr>
+      <tr>
+        <th>Hari</th>
+        <td>Senin – Sabtu</td>
+      </tr>
+      <tr>
+        <th>Jam</th>
+        <td>08.00 – 14.00 WIT</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Kontak -->
+  <div class="box">
+    <h2>Informasi & Kontak</h2>
+    <table class="table-info">
+      <tr>
+        <th>Alamat</th>
+        <td>JL. DS Yan Mamoribo, Kec. Nabire,<br>
+      Kab. Nabire, Prov. Papua Tengah</td>
+      </tr>
+      <tr>
+        <th>WhatsApp</th>
+        <td>08xxxxxxxxxx</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>smkpetranbr07@gmail.com</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Catatan -->
+  <div class="box">
+    <h2>Catatan Penting</h2>
+    <table class="table-info">
+      <tr>
+        <th>Informasi</th>
+        <td>
+          Calon siswa diharapkan membawa berkas lengkap saat pendaftaran.
+          Informasi lebih lanjut dapat diperoleh langsung di sekolah 
+          atau melalui kontak resmi sekolah.
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<div class="footer">
+  © 2026 Website Resmi Sekolah | Informasi PPDB
+</div>
+
+</body>
+</html>
