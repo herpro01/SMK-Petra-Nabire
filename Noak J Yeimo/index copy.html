@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+
+<style>
+body {font-family: Arial; margin:0; background:#f4f6f9;}
+
+/* Header */
+header {
+  background:#2b9439;
+  color:white;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+/* Logo + Judul */
+.header-top {
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+/* Logo */
+.logo {
+  width:40px;
+}
+
+/* Navbar */
+nav {
+  background:#3f3f3f;
+  padding:10px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+nav a:hover {color:yellow;}
+
+section {padding:30px;}
+
+.card {
+  background:white;
+  padding:25px;
+  margin:auto;
+  max-width:700px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.7s;
+}
+.card.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+#jam {margin-top:10px; font-weight:bold;}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-top">
+  <!-- LOGO -->
+  <img src="Gambar/g1.jpg" class="logo">
+  
+  <!-- JUDUL -->
+  <h1>Sistem Kunjungan Rumah</h1>
+</div>
+
+<p id="jam"></p>
+
+</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="form.html">Registrasi</a>
+<a href="data.html">Data</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="flowchart.html">Flowchart</a>
+<a href="etika.html">Etika</a>
+</nav>
+
+<section>
+<div class="card" id="card">
+
+<!-- GAMBAR -->
+<img src="Gambar/g1.jpg" class="gambar">
+
+<h2>Beranda</h2>
+<p>Sistem ini digunakan untuk registrasi dan follow-up kunjungan rumah pasien.</p>
+
+</div>
+</section>
+
+<style>
+/* Gambar */
+.gambar {
+  width:120px;
+  margin-bottom:15px;
+  transition:0.3s;
+}
+
+/* efek hover */
+.gambar:hover {
+  transform: scale(1.1);
+}
+</style>
+
+<script>
+window.onload = () => document.getElementById("card").classList.add("show");
+</script>
+
+</body>
+</html>

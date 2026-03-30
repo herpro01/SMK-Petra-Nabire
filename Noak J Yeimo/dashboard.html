@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin:0;
+  background: linear-gradient(to right,#eef2f7,#d9e6ff);
+}
+
+/* Header */
+header {
+  background:#10a34d;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+/* Navbar */
+nav {
+  background:#2d2f31;
+  padding:12px;
+  text-align:center;
+}
+nav a {
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+nav a:hover {color:yellow;}
+
+/* Section */
+section {
+  padding:30px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* Card */
+.card {
+  background:white;
+  width:200px;
+  padding:20px;
+  border-radius:12px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  transform:translateY(30px);
+  opacity:0;
+  transition:0.7s;
+}
+.card.show {
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* Angka */
+.angka {
+  font-size:35px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* warna */
+.total {color:#2c7be5;}
+.sudah {color:green;}
+.belum {color:red;}
+</style>
+</head>
+
+<body>
+
+<header><h1>Dashboard Kunjungan</h1></header>
+
+<style>
+nav {
+  background: linear-gradient(90deg,#10a34d,#08d65e);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Hover efek */
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* Link aktif */
+nav a.active {
+  background: white;
+  color: #10a34d;
+}
+</style>
+
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="form.html">Registrasi</a>
+<a href="data.html">Data</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="flowchart.html">Flowchart</a>
+<a href="etika.html">Etika</a>
+</nav>
+<section>
+
+<div class="card" id="c1">
+<h3>Total Pasien</h3>
+<p class="angka total" id="total">0</p>
+</div>
+
+<div class="card" id="c2">
+<h3>Sudah Dikunjungi</h3>
+<p class="angka sudah" id="sudah">0</p>
+</div>
+
+<div class="card" id="c3">
+<h3>Belum Dikunjungi</h3>
+<p class="angka belum" id="belum">0</p>
+</div>
+
+</section>
+
+<script>
+// animasi muncul
+window.onload = function(){
+  document.getElementById("c1").classList.add("show");
+  document.getElementById("c2").classList.add("show");
+  document.getElementById("c3").classList.add("show");
+
+  hitung();
+}
+
+// hitung data
+function hitung(){
+let data = JSON.parse(localStorage.getItem('kunjungan')) || [];
+
+let total = data.length;
+let sudah = 0;
+let belum = 0;
+
+data.forEach(p=>{
+  if(p.status === "Sudah"){
+    sudah++;
+  } else {
+    belum++;
+  }
+});
+
+// tampilkan
+document.getElementById("total").innerText = total;
+document.getElementById("sudah").innerText = sudah;
+document.getElementById("belum").innerText = belum;
+}
+</script>
+
+</body>
+</html>

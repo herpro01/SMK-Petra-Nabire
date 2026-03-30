@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Data Kunjungan</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin:0;
+  background:#eef2f7;
+}
+
+header {
+  background:#10a34d;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+section {
+  padding:30px;
+}
+
+.card {
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  max-width:900px;
+  margin:auto;
+}
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+
+th {
+  background:#10a34d;
+  color:white;
+  padding:10px;
+}
+
+td {
+  padding:10px;
+  border-bottom:1px solid #ddd;
+}
+
+tr:hover {
+  background:#f1f5ff;
+}
+
+.btn {
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 15px;
+  background:#2c7be5;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+}
+.btn:hover {
+  background:#1a5bb8;
+}
+</style>
+</head>
+
+<body>
+
+<header><h1>Data Kunjungan</h1></header>
+<style>
+nav {
+  background: linear-gradient(90deg,#10a34d,#08d65e);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Hover efek */
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* Link aktif */
+nav a.active {
+  background: white;
+  color: #10a34d;
+}
+</style>
+
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="form.html">Registrasi</a>
+<a href="data.html">Data</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="flowchart.html">Flowchart</a>
+<a href="etika.html">Etika</a>
+</nav>
+<section>
+<div class="card">
+
+<table>
+<tr>
+<th>Nama</th>
+<th>Alamat</th>
+<th>Tanggal</th>
+<th>Status</th>
+<th>Catatan</th>
+</tr>
+
+<tr id="hasil"></tr>
+</table>
+
+<a href="form.html" class="btn">+ Input Lagi</a>
+
+</div>
+</section>
+
+<script>
+// ambil data dari URL
+let params = new URLSearchParams(window.location.search);
+
+let nama = params.get("nama");
+let alamat = params.get("alamat");
+let tanggal = params.get("tanggal");
+let status = params.get("status");
+let catatan = params.get("catatan");
+
+// tampilkan
+if(nama){
+document.getElementById("hasil").innerHTML = `
+<td>${nama}</td>
+<td>${alamat}</td>
+<td>${tanggal}</td>
+<td>${status}</td>
+<td>${catatan}</td>
+`;
+} else {
+document.getElementById("hasil").innerHTML = `
+<td colspan="5" style="text-align:center;">Belum ada data</td>
+`;
+}
+</script>
+
+</body>
+</html>

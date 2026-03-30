@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<style>
+body {
+  font-family: Arial;
+  margin:0;
+  background: linear-gradient(to right,#eef2f7,#d9e6ff);
+}
+
+header {
+  background:#10a34d;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+section {
+  padding:40px;
+}
+
+.card {
+  background:white;
+  max-width:400px;
+  margin:auto;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, select {
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  background:#2c7be5;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+}
+button:hover {
+  background:#1a5bb8;
+}
+</style>
+</head>
+
+<body>
+
+<header style="display:flex; align-items:center; justify-content:center; gap:15px;">
+  
+  <!-- Logo -->
+  <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" 
+       alt="logo" 
+       style="width:50px; height:50px;">
+
+  <!-- Judul -->
+  <h1 style="margin:0;">Form Kunjungan Rumah</h1>
+
+</header>
+<style>
+nav {
+  background: linear-gradient(90deg,#10a34d,#08d65e);
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Hover efek */
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* Link aktif */
+nav a.active {
+  background: white;
+  color: #10a34d;
+}
+</style>
+
+<nav>
+<a href="index.html" class="active">Home</a>
+<a href="form.html">Registrasi</a>
+<a href="data.html">Data</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="flowchart.html">Flowchart</a>
+<a href="etika.html">Etika</a>
+</nav>
+<section>
+<div class="card">
+
+<input id="nama" placeholder="Nama Pasien">
+<input id="alamat" placeholder="Alamat Rumah">
+<input id="tanggal" type="date">
+
+<select id="status">
+<option value="">Pilih Status</option>
+<option>Sudah</option>
+<option>Belum</option>
+</select>
+
+<input id="catatan" placeholder="Catatan Perawat">
+
+<button onclick="kirim()">Simpan Data</button>
+
+</div>
+</section>
+
+<script>
+function kirim(){
+let data = JSON.parse(localStorage.getItem('kunjungan')) || [];
+
+let nama = document.getElementById('nama').value;
+let alamat = document.getElementById('alamat').value;
+let tanggal = document.getElementById('tanggal').value;
+let status = document.getElementById('status').value;
+let catatan = document.getElementById('catatan').value;
+
+// validasi
+if(!nama || !alamat || !tanggal || !status){
+  alert("Harap isi semua data!");
+  return;
+}
+
+// simpan permanen
+data.push({nama, alamat, tanggal, status, catatan});
+localStorage.setItem('kunjungan', JSON.stringify(data));
+
+// pindah halaman
+window.location.href = "data.html";
+}
+</script>
+
+</body>
+</html>
