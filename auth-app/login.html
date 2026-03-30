@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Music Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<div class="card">
+    <h1>Login Akun</h1>
+    <p>Masuk menggunakan Email atau Google</p>
+
+    <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Password</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login Email</button>
+    </form>
+
+    <div class="divider">ATAU</div>
+
+    <!-- Login Google -->
+    <div id="g_id_onload"
+         data-client_id="ISI_CLIENT_ID_GOOGLE"
+         data-callback="handleGoogleLogin">
+    </div>
+
+    <div class="g_id_signin" data-type="standard"></div>
+
+    <p class="link">
+        Belum punya akun? <a href="register.html">Daftar di sini</a>
+    </p>
+</div>
+
+<script src="auth.js"></script>
+</body>
+</html>
